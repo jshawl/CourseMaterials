@@ -62,8 +62,8 @@ do {
 } while loopy != 30
 
 
-for var index = 0; index < 3; index++ {
-    println( index );
+for var index4 = 0; index4 < 3; index4++ {
+    println( index4 );
 }
 
 println(index) //wtf
