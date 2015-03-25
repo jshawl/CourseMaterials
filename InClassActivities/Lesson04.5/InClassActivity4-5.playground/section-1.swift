@@ -18,25 +18,60 @@ However you may use the function ``sqrt(Double)" to calculate any roots needed.
 */
 
 // TODO: Complete the addition function.
-func addition(lhs:Double, rhs:Double) -> Double
+func addition(lhs:Double, rhs:Double) -> Double{
+  return lhs + rhs
+}
+
+println("\(addition(2.0, 3.0))")
 
 // TODO: Complete the subtraction function.
-func subtraction(lhs:Double, rhs:Double) -> Double
+func subtraction(lhs:Double, rhs:Double) -> Double {
+  return lhs - rhs
+}
+
+
 
 // TODO: Complete the multiplication function.
-func multiplication(lhs:Double, rhs:Double) -> Double
+func multiplication(lhs:Double, rhs:Double) -> Double {
+  // add the first number to itself the second number of times
+    var product:Int = 0
+    for var i = 0 ; i < Int(rhs); i++ { // range
+      product = product + Int(lhs) // addition function
+    }
+    return Double(product)
+}
 
+/*
 // Bonus!
 // TODO: Complete the division function.
 // Note: Remember that the rhs cannot be 0.
 // result = lhs / rhs
-func division(lhs:Double, rhs:Double) -> Double
 
+func division(lhs:Double, rhs:Double) -> Double {
+   
+}
+*/
 // TODO: Complete the power function.
 // result = lhs ^ rhs
 // Assume rhs is always a whole number.  Or check if is not and then print a warning and return nil.
-func power(lhs:Double, rhs:Double) -> Double?
+func power(lhs:Double, rhs:Double) -> Double? {
+  // placeholder sum = 0
+    if rhs == 0{
+      return 1
+    }
+    var sum:Double? = lhs
+    for var i = 1; i < Int(rhs); i++ {
+        sum! = multiplication(sum!, lhs)
+    }
+    return sum
+  // loop for second number times - 1
+    // sum += first number times itself
+  // end loop
+}
 
+power(3, 2)
+
+/*
 // TODO: Complete the quadratic equation.
 // result = (-b +/ sqrt(b ^ 2 - 4ac)) / (2a)
 // Note:  The quadratic equation results in 2 possible values.
@@ -65,3 +100,4 @@ func rightTriangleCompletion(a:Double?, b:Double?, c:Double?) -> (finalA:Double,
 // TODO:  Find the ``a" for a triangle with side of 5 and a hypotenuse of 13
 
 // TODO:  Send two nil values to the rightTriangleCompletion function and confirm it returns nil
+*/
